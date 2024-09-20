@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-import 'dart:html';
+import 'package:web/web.dart';
 
 import 'package:platform_detect/platform_detect.dart' show browser;
 
@@ -61,7 +61,7 @@ class Feature {
       'touch',
       window.navigator.maxTouchPoints != null
           ? window.navigator.maxTouchPoints! > 0
-          : TouchEvent.supported);
+          : false);
 
   /// Whether the internet explorer browser supports touch events.
   ///
